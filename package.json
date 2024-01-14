@@ -1,6 +1,6 @@
 {
   "name": "omochi-css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.ts",
   "repository": "git@github.com:kiyotd/omochi-css.git",
   "author": "kiyotd <torigoedesign@gmail.com>",
