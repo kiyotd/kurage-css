@@ -1,0 +1,21 @@
+{
+  "name": "omochi-css",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "git@github.com:kiyotd/omochi-css.git",
+  "author": "kiyotd <torigoedesign@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:scss:watch": "bun --watch src/index.ts",
+    "build:scss": "bun src/index.ts",
+    "pettan:omochi": "npm-run-all pettan:omochi:*",
+    "pettan:omochi:expanded": "sass scss/style.scss dist/omochi.css --no-source-map --style=expanded",
+    "pettan:omochi:compressed": "sass scss/style.scss dist/omochi.min.css --no-source-map --style=compressed"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "npm-run-all": "^4.1.5",
+    "rfs": "^10.0.0",
+    "sass": "^1.69.7"
+  }
+}

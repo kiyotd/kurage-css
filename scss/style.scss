@@ -1,0 +1,27 @@
+/*! omochi-css */
+
+// rfs
+@import "../node_modules/rfs/scss";
+
+// Responsive Font Size
+@import "./responsive/rfs";
+
+// Responsive Margin
+@import "./responsive/rmt";
+@import "./responsive/rmb";
+@import "./responsive/rml";
+@import "./responsive/rms";
+@import "./responsive/rmr";
+@import "./responsive/rme";
+@import "./responsive/rmx";
+@import "./responsive/rmy";
+
+// Responsive Padding
+@import "./responsive/rpt";
+@import "./responsive/rpb";
+@import "./responsive/rpl";
+@import "./responsive/rps";
+@import "./responsive/rpr";
+@import "./responsive/rpe";
+@import "./responsive/rpx";
+@import "./responsive/rpy";
