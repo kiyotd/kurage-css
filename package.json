@@ -6,6 +6,7 @@
   "author": "kiyotd <torigoedesign@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build:scss:hot": "bun --hot src/index.ts",
     "build:scss:watch": "bun --watch src/index.ts",
     "build:scss": "bun src/index.ts",
     "pettan:omochi": "npm-run-all pettan:omochi:*",
