@@ -1,11 +1,11 @@
 import fs from "fs";
 
 /**
- * 指定された出力パスにCSS文字列を追記します。
+ * 指定された出力パスに文字列を追記します。
  *
- * @param output - CSS文字列を追記するファイルのパス
- * @param css - ファイルに追記するCSS文字列
+ * @param output - 文字列を追記するファイルのパス
+ * @param str - ファイルに追記する文字列
  */
-export function writeToFile(output: string, css: string) {
-  fs.appendFileSync(output, css);
+export function writeToFile(output: string, str: string) {
+  fs.appendFileSync(output, str);
 }
