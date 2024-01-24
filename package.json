@@ -1,17 +1,17 @@
 {
   "name": "omochi-css",
   "version": "1.2.2",
-  "main": "index.ts",
+  "main": "omochi.ts",
   "repository": "git@github.com:kiyotd/omochi-css.git",
   "author": "kiyotd <torigoedesign@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:scss:hot": "bun --hot src/index.ts",
-    "build:scss:watch": "bun --watch src/index.ts",
-    "build:scss": "bun src/index.ts",
-    "pettan:omochi": "npm-run-all pettan:omochi:*",
-    "pettan:omochi:expanded": "sass scss/style.scss dist/omochi.css --no-source-map --style=expanded",
-    "pettan:omochi:compressed": "sass scss/style.scss dist/omochi.min.css --no-source-map --style=compressed"
+    "omochi:generate:scss:hot": "bun --hot src/omochi.ts",
+    "omochi:generate:scss:watch": "bun --watch src/omochi.ts",
+    "omochi:generate:scss": "bun src/omochi.ts",
+    "omochi:generate:css": "npm-run-all omochi:generate:css:*",
+    "omochi:generate:css:expanded": "sass scss/omochi.scss dist/omochi.css --no-source-map --style=expanded",
+    "omochi:generate:css:compressed": "sass scss/omochi.scss dist/omochi.min.css --no-source-map --style=compressed"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

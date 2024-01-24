@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { importRfsStr, outputPath } from "./variables";
+import { importRfsStr, OutputScssPath } from "./variables";
 import { writeToFile } from "./functions";
 
 /**
@@ -52,17 +52,13 @@ const entries: Entry[] = [
   { name: "rmt", scopes: commonScopes, props: ["margin-top"] },
   { name: "rmb", scopes: commonScopes, props: ["margin-bottom"] },
   { name: "rml", scopes: commonScopes, props: ["margin-left"] },
-  { name: "rms", scopes: commonScopes, props: ["margin-left"] },
   { name: "rmr", scopes: commonScopes, props: ["margin-right"] },
-  { name: "rme", scopes: commonScopes, props: ["margin-right"] },
   { name: "rmx", scopes: commonScopes, props: ["margin-left", "margin-right"] },
   { name: "rmy", scopes: commonScopes, props: ["margin-top", "margin-bottom"] },
   { name: "rpt", scopes: commonScopes, props: ["padding-top"] },
   { name: "rpb", scopes: commonScopes, props: ["padding-bottom"] },
   { name: "rpl", scopes: commonScopes, props: ["padding-left"] },
-  { name: "rps", scopes: commonScopes, props: ["padding-left"] },
   { name: "rpr", scopes: commonScopes, props: ["padding-right"] },
-  { name: "rpe", scopes: commonScopes, props: ["padding-right"] },
   { name: "rpx", scopes: commonScopes, props: ["padding-left", "padding-right"] },
   { name: "rpy", scopes: commonScopes, props: ["padding-top", "padding-bottom"] },
 ];
@@ -70,7 +66,7 @@ const entries: Entry[] = [
 // 各エントリに対して処理を行う
 entries.forEach((file: Entry) => {
   // 出力パスの生成
-  const output = path.resolve(__dirname, `${outputPath}/_${file.name}.scss`);
+  const output = path.resolve(__dirname, `${OutputScssPath}/_${file.name}.scss`);
   let classStrArr: string[] = [];
 
   // scopes の配列を startNum の昇順でソート
