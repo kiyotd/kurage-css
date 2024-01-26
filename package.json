@@ -1,17 +1,20 @@
 {
-  "name": "omochi-css",
-  "version": "1.2.2",
-  "main": "omochi.ts",
-  "repository": "git@github.com:kiyotd/omochi-css.git",
+  "name": "kurage-css",
+  "version": "1.3.0",
+  "main": "index.ts",
+  "repository": "git@github.com:kiyotd/kurage-css.git",
   "author": "kiyotd <torigoedesign@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "omochi:generate:scss:hot": "bun --hot src/omochi.ts",
-    "omochi:generate:scss:watch": "bun --watch src/omochi.ts",
-    "omochi:generate:scss": "bun src/omochi.ts",
-    "omochi:generate:css": "npm-run-all omochi:generate:css:*",
-    "omochi:generate:css:expanded": "sass scss/omochi.scss dist/omochi.css --no-source-map --style=expanded",
-    "omochi:generate:css:compressed": "sass scss/omochi.scss dist/omochi.min.css --no-source-map --style=compressed"
+    "generate:scss:hot": "bun --hot src/index.ts",
+    "generate:scss:watch": "bun --watch src/index.ts",
+    "build:scss": "bun src/index.ts",
+    "build:css": "npm-run-all generate:css:default:* generate:css:breakpoint:expanded",
+    "generate:css:default:expanded": "sass scss/kurage.scss dist/kurage.css --no-source-map --style=expanded",
+    "generate:css:default:compressed": "sass scss/kurage.scss dist/kurage.min.css --no-source-map --style=compressed",
+    "generate:css:breakpoint:expanded": "sass scss/kurage-breakpoint.scss dist/_temp.txt --no-source-map --style=expanded",
+    "cleanup:css": "bun src/cleanup-css.ts",
+    "build": "npm-run-all build:css cleanup:css"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

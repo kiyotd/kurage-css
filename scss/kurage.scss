@@ -1,0 +1,23 @@
+/*! kurage-css v1.3.0 */
+
+// rfs
+@import "../node_modules/rfs/scss";
+
+// Responsive Font Size
+@import "default/rfs";
+
+// Responsive Margin
+@import "default/rmt";
+@import "default/rmb";
+@import "default/rml";
+@import "default/rmr";
+@import "default/rmx";
+@import "default/rmy";
+
+// Responsive Padding
+@import "default/rpt";
+@import "default/rpb";
+@import "default/rpl";
+@import "default/rpr";
+@import "default/rpx";
+@import "default/rpy";

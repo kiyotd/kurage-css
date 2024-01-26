@@ -1,0 +1,23 @@
+/*! kurage-css v1.3.0 */
+
+// rfs
+@import "../node_modules/rfs/scss";
+
+// Responsive Font Size
+@import "breakpoint/rfs";
+
+// Responsive Margin
+@import "breakpoint/rmt";
+@import "breakpoint/rmb";
+@import "breakpoint/rml";
+@import "breakpoint/rmr";
+@import "breakpoint/rmx";
+@import "breakpoint/rmy";
+
+// Responsive Padding
+@import "breakpoint/rpt";
+@import "breakpoint/rpb";
+@import "breakpoint/rpl";
+@import "breakpoint/rpr";
+@import "breakpoint/rpx";
+@import "breakpoint/rpy";
