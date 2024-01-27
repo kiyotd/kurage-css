@@ -1,4 +1,4 @@
-/*! @kiyotd/kurage-css@1.3.2 */
+/*! @kiyotd/kurage-css@1.3.3 */
 @media (max-width: 576px) {
 .rfs-sm-0-5 {font-size: 0.5rem;}
 .rfs-sm-0-525 {font-size: 0.525rem;}
@@ -204,6 +204,7 @@
 .rfs-sm-14-5 {font-size: calc(2.575rem + 15.9vw);}
 .rfs-sm-15 {font-size: calc(2.625rem + 16.5vw);}
 .rfs-sm-15-5 {font-size: calc(2.675rem + 17.1vw);}
+.rfs-sm-16 {font-size: calc(2.725rem + 17.7vw);}
 .rmt-sm-0 {margin-top: 0rem;}
 .rmt-sm-0-125 {margin-top: 0.125rem;}
 .rmt-sm-0-25 {margin-top: 0.25rem;}
@@ -264,6 +265,7 @@
 .rmt-sm-13 {margin-top: calc(2.425rem + 14.1vw);}
 .rmt-sm-14 {margin-top: calc(2.525rem + 15.3vw);}
 .rmt-sm-15 {margin-top: calc(2.625rem + 16.5vw);}
+.rmt-sm-16 {margin-top: calc(2.725rem + 17.7vw);}
 .rmb-sm-0 {margin-bottom: 0rem;}
 .rmb-sm-0-125 {margin-bottom: 0.125rem;}
 .rmb-sm-0-25 {margin-bottom: 0.25rem;}
@@ -324,6 +326,7 @@
 .rmb-sm-13 {margin-bottom: calc(2.425rem + 14.1vw);}
 .rmb-sm-14 {margin-bottom: calc(2.525rem + 15.3vw);}
 .rmb-sm-15 {margin-bottom: calc(2.625rem + 16.5vw);}
+.rmb-sm-16 {margin-bottom: calc(2.725rem + 17.7vw);}
 .rml-sm-0 {margin-left: 0rem;}
 .rml-sm-0-125 {margin-left: 0.125rem;}
 .rml-sm-0-25 {margin-left: 0.25rem;}
@@ -384,6 +387,7 @@
 .rml-sm-13 {margin-left: calc(2.425rem + 14.1vw);}
 .rml-sm-14 {margin-left: calc(2.525rem + 15.3vw);}
 .rml-sm-15 {margin-left: calc(2.625rem + 16.5vw);}
+.rml-sm-16 {margin-left: calc(2.725rem + 17.7vw);}
 .rmr-sm-0 {margin-right: 0rem;}
 .rmr-sm-0-125 {margin-right: 0.125rem;}
 .rmr-sm-0-25 {margin-right: 0.25rem;}
@@ -444,6 +448,7 @@
 .rmr-sm-13 {margin-right: calc(2.425rem + 14.1vw);}
 .rmr-sm-14 {margin-right: calc(2.525rem + 15.3vw);}
 .rmr-sm-15 {margin-right: calc(2.625rem + 16.5vw);}
+.rmr-sm-16 {margin-right: calc(2.725rem + 17.7vw);}
 .rmx-sm-0 {margin-left: 0rem;margin-right: 0rem;}
 .rmx-sm-0-125 {margin-left: 0.125rem;margin-right: 0.125rem;}
 .rmx-sm-0-25 {margin-left: 0.25rem;margin-right: 0.25rem;}
@@ -504,6 +509,7 @@
 .rmx-sm-13 {margin-left: calc(2.425rem + 14.1vw);margin-right: calc(2.425rem + 14.1vw);}
 .rmx-sm-14 {margin-left: calc(2.525rem + 15.3vw);margin-right: calc(2.525rem + 15.3vw);}
 .rmx-sm-15 {margin-left: calc(2.625rem + 16.5vw);margin-right: calc(2.625rem + 16.5vw);}
+.rmx-sm-16 {margin-left: calc(2.725rem + 17.7vw);margin-right: calc(2.725rem + 17.7vw);}
 .rmy-sm-0 {margin-top: 0rem;margin-bottom: 0rem;}
 .rmy-sm-0-125 {margin-top: 0.125rem;margin-bottom: 0.125rem;}
 .rmy-sm-0-25 {margin-top: 0.25rem;margin-bottom: 0.25rem;}
@@ -564,6 +570,7 @@
 .rmy-sm-13 {margin-top: calc(2.425rem + 14.1vw);margin-bottom: calc(2.425rem + 14.1vw);}
 .rmy-sm-14 {margin-top: calc(2.525rem + 15.3vw);margin-bottom: calc(2.525rem + 15.3vw);}
 .rmy-sm-15 {margin-top: calc(2.625rem + 16.5vw);margin-bottom: calc(2.625rem + 16.5vw);}
+.rmy-sm-16 {margin-top: calc(2.725rem + 17.7vw);margin-bottom: calc(2.725rem + 17.7vw);}
 .rpt-sm-0 {padding-top: 0rem;}
 .rpt-sm-0-125 {padding-top: 0.125rem;}
 .rpt-sm-0-25 {padding-top: 0.25rem;}
@@ -624,6 +631,7 @@
 .rpt-sm-13 {padding-top: calc(2.425rem + 14.1vw);}
 .rpt-sm-14 {padding-top: calc(2.525rem + 15.3vw);}
 .rpt-sm-15 {padding-top: calc(2.625rem + 16.5vw);}
+.rpt-sm-16 {padding-top: calc(2.725rem + 17.7vw);}
 .rpb-sm-0 {padding-bottom: 0rem;}
 .rpb-sm-0-125 {padding-bottom: 0.125rem;}
 .rpb-sm-0-25 {padding-bottom: 0.25rem;}
@@ -684,6 +692,7 @@
 .rpb-sm-13 {padding-bottom: calc(2.425rem + 14.1vw);}
 .rpb-sm-14 {padding-bottom: calc(2.525rem + 15.3vw);}
 .rpb-sm-15 {padding-bottom: calc(2.625rem + 16.5vw);}
+.rpb-sm-16 {padding-bottom: calc(2.725rem + 17.7vw);}
 .rpl-sm-0 {padding-left: 0rem;}
 .rpl-sm-0-125 {padding-left: 0.125rem;}
 .rpl-sm-0-25 {padding-left: 0.25rem;}
@@ -744,6 +753,7 @@
 .rpl-sm-13 {padding-left: calc(2.425rem + 14.1vw);}
 .rpl-sm-14 {padding-left: calc(2.525rem + 15.3vw);}
 .rpl-sm-15 {padding-left: calc(2.625rem + 16.5vw);}
+.rpl-sm-16 {padding-left: calc(2.725rem + 17.7vw);}
 .rpr-sm-0 {padding-right: 0rem;}
 .rpr-sm-0-125 {padding-right: 0.125rem;}
 .rpr-sm-0-25 {padding-right: 0.25rem;}
@@ -804,6 +814,7 @@
 .rpr-sm-13 {padding-right: calc(2.425rem + 14.1vw);}
 .rpr-sm-14 {padding-right: calc(2.525rem + 15.3vw);}
 .rpr-sm-15 {padding-right: calc(2.625rem + 16.5vw);}
+.rpr-sm-16 {padding-right: calc(2.725rem + 17.7vw);}
 .rpx-sm-0 {padding-left: 0rem;padding-right: 0rem;}
 .rpx-sm-0-125 {padding-left: 0.125rem;padding-right: 0.125rem;}
 .rpx-sm-0-25 {padding-left: 0.25rem;padding-right: 0.25rem;}
@@ -864,6 +875,7 @@
 .rpx-sm-13 {padding-left: calc(2.425rem + 14.1vw);padding-right: calc(2.425rem + 14.1vw);}
 .rpx-sm-14 {padding-left: calc(2.525rem + 15.3vw);padding-right: calc(2.525rem + 15.3vw);}
 .rpx-sm-15 {padding-left: calc(2.625rem + 16.5vw);padding-right: calc(2.625rem + 16.5vw);}
+.rpx-sm-16 {padding-left: calc(2.725rem + 17.7vw);padding-right: calc(2.725rem + 17.7vw);}
 .rpy-sm-0 {padding-top: 0rem;padding-bottom: 0rem;}
 .rpy-sm-0-125 {padding-top: 0.125rem;padding-bottom: 0.125rem;}
 .rpy-sm-0-25 {padding-top: 0.25rem;padding-bottom: 0.25rem;}
@@ -924,4 +936,5 @@
 .rpy-sm-13 {padding-top: calc(2.425rem + 14.1vw);padding-bottom: calc(2.425rem + 14.1vw);}
 .rpy-sm-14 {padding-top: calc(2.525rem + 15.3vw);padding-bottom: calc(2.525rem + 15.3vw);}
 .rpy-sm-15 {padding-top: calc(2.625rem + 16.5vw);padding-bottom: calc(2.625rem + 16.5vw);}
+.rpy-sm-16 {padding-top: calc(2.725rem + 17.7vw);padding-bottom: calc(2.725rem + 17.7vw);}
 }

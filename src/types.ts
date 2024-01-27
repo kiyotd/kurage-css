@@ -1,7 +1,7 @@
 /**
  * Breakpoint型は、ブレークポイントの名前と値の配列を定義します。
  */
-export type Breakpoint = {
+export type Breakpoints = {
   [key: string]: number[];
 };
 

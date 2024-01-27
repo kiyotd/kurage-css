@@ -82,7 +82,7 @@ entries.forEach((file: Entry) => {
     // scopes の配列をループ
     sortedScopes.forEach((scope: Scope) => {
       // 指定した範囲でループを回す
-      for (let i = scope.startNum; i < scope.endNum;) {
+      for (let i = scope.startNum; i <= scope.endNum;) {
         // 数値を四捨五入して小数点第三位までの文字列に変換
         const num = Math.round(i * 1000) / 1000;
 

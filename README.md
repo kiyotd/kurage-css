@@ -31,6 +31,28 @@
 | `rpx-*` | Responsive padding on the x-axis (left and right) |
 | `rpy-*` | Responsive padding on the y-axis (top and bottom) |
 
+## Breakpoints
+
+src/breakpoints.ts
+
+Below are the products of the configuration . /dist/. You can set your own breakpoint names and value arrays.
+See src/variables.ts for the generated ranges and number of steps.
+
+下記、設定での生成物は ./dist/ にあります。独自のブレイクポイント名と値の配列を設定できます。
+生成範囲やステップ数は、src/variables.ts を参照してください。
+
+```typescript
+export const breakpoints: Breakpoint = {
+  "sp": [430, 576],
+  "sm": [575, 576],
+  "md": [767, 768],
+  "tab": [768, 834],
+  "lg": [991, 992],
+  "xl": [1999, 1200],
+  "xxl": [1399, 1400],
+};
+```
+
 ## Build SCSS
 
 ```

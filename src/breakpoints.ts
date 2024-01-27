@@ -1,10 +1,10 @@
-import { Breakpoint } from "./types";
+import { Breakpoints } from "./types";
 
 /**
  * breakpointsは、ブレークポイントの名前と値の配列を定義したオブジェクトです。
  * @media (max-width: <値>px) のメディアクエリが定義されます。
  */
-export const breakpoints: Breakpoint = {
+export const breakpoints: Breakpoints = {
   "sp": [430, 576],
   "sm": [575, 576],
   "md": [767, 768],
