@@ -1,10 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { breakpoints } from "./variables";
+import { breakpoints } from "./breakpoints";
 
 const distPath = path.join(__dirname, '../dist');
 
-const srcCssFileNameArr: string[] = ['_temp.txt'];
+const srcCssFileNameArr: string[] = ['.temp.css'];
 
 srcCssFileNameArr.forEach((fileName: string) => {
   const filePath = path.join(distPath, fileName);
@@ -42,46 +42,39 @@ srcCssFileNameArr.forEach((fileName: string) => {
       // 半角スペース2個を削除
       css = css.replace(/  /g, '');
 
-      // 1行目に versionInfo を追加
-      resultStrArr.push(versionInfo);
-
       // breakpoints のループ
       Object.keys(breakpoints).forEach((key) => {
-        // メディアクエリの開始
-        resultStrArr.push("@media (max-width: " + breakpoints[key] + "px) {");
+        breakpoints[key].forEach((breakpoint) => {
+          // 1行目に versionInfo を追加
+          resultStrArr.push(versionInfo);
 
-        // -key を含む行を resultStrArr に追加
-        css.split('\n').forEach((line) => {
-          if (line.match(`-${key}`)) {
-            resultStrArr.push(line);
-          }
+          // メディアクエリの開始
+          resultStrArr.push("@media (max-width: " + breakpoint + "px) {");
+
+          // -key を含む行を resultStrArr に追加
+          css.split('\n').forEach((line) => {
+            if (line.match(`-${key}`)) {
+              resultStrArr.push(line);
+            }
+          });
+
+          // メディアクエリの終了
+          resultStrArr.push("}");
+
+          // 新しいファイル名を生成
+          const newFileName = `kurage-${key}-${breakpoint}.css`;
+          const newFilePath = path.join(distPath, newFileName);
+
+          // ファイルの初期化
+          fs.writeFileSync(newFilePath, '');
+
+          // ファイルへの書き込み
+          fs.appendFileSync(newFilePath, resultStrArr.join('\n'));
+
+          resultStrArr = [];
         });
-
-        // メディアクエリの終了
-        resultStrArr.push("}");
-
-        // 新しいファイル名を生成
-        const newFileName = `kurage-${key}-${breakpoints[key]}.css`;
-        const newFilePath = path.join(distPath, newFileName);
-
-        // ファイルの初期化
-        fs.writeFileSync(newFilePath, '');
-
-        // ファイルへの書き込み
-        fs.appendFileSync(newFilePath, resultStrArr.join('\n'));
-
-        resultStrArr = [];
       });
 
-      // resultStrArr.forEach((line) => {
-      //   console.log(line);
-      // });
-
-      // ファイルの初期化
-      // fs.writeFileSync(filePath, '');
-
-      // ファイルへの書き込み
-      // fs.appendFileSync(filePath, resultStrArr.join('\n'));
     });
   } else {
     console.log(`File does not exist: ${filePath}`);

@@ -2,7 +2,7 @@
  * Breakpoint型は、ブレークポイントの名前と値を定義します。
  */
 export type Breakpoint = {
-  [key: string]: number;
+  [key: string]: number[];
 };
 
 /**

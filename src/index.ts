@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
-import { breakpoints, entries, importRfsStr, OutputScssBreakPointPath, OutputScssDefaultPath } from "./variables";
+import { entries, importRfsStr, OutputScssBreakPointPath, OutputScssDefaultPath } from "./variables";
+import { breakpoints } from "./breakpoints";
 import { writeToFile } from "./functions";
 import { Entry, Scope } from "./types";
 
@@ -20,7 +21,7 @@ entries.forEach((file: Entry) => {
   // scopes の配列をループ
   sortedScopes.forEach((scope: Scope) => {
     // 指定した範囲でループを回す
-    for (let i = scope.startNum; i < scope.endNum;) {
+    for (let i = scope.startNum; i <= scope.endNum;) {
       // 数値を四捨五入して小数点第三位までの文字列に変換
       const num = Math.round(i * 1000) / 1000;
 
@@ -77,10 +78,6 @@ entries.forEach((file: Entry) => {
 
   // .rfs-sp-d-1 のように、breakpoint ごとにクラスを生成する
   Object.keys(breakpoints).forEach((key) => {
-    // let mediaQueryStr = `@media (max-width: ${breakpoints[key]}px) {` + '\n';
-    // let mediaQueryStr = "";
-
-    // classStrArr.push(`@media (max-width: ${breakpoints[key]}px) {` + '\n');
 
     // scopes の配列をループ
     sortedScopes.forEach((scope: Scope) => {
@@ -111,10 +108,6 @@ entries.forEach((file: Entry) => {
       }
     });
 
-    // classStrArr.push('}/* ' + key +' */' + '\n\n');
-
-    // classStrArr に追加
-    // classStrArr.push(mediaQueryStr);
   });
 
   // resultArr重複を削除

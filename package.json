@@ -1,6 +1,6 @@
 {
   "name": "kurage-css",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "index.ts",
   "repository": "git@github.com:kiyotd/kurage-css.git",
   "author": "kiyotd <torigoedesign@gmail.com>",
@@ -12,7 +12,7 @@
     "build:css": "npm-run-all generate:css:default:* generate:css:breakpoint:expanded",
     "generate:css:default:expanded": "sass scss/kurage.scss dist/kurage.css --no-source-map --style=expanded",
     "generate:css:default:compressed": "sass scss/kurage.scss dist/kurage.min.css --no-source-map --style=compressed",
-    "generate:css:breakpoint:expanded": "sass scss/kurage-breakpoint.scss dist/_temp.txt --no-source-map --style=expanded",
+    "generate:css:breakpoint:expanded": "sass scss/kurage-breakpoint.scss dist/.temp.css --no-source-map --style=expanded",
     "cleanup:css": "bun src/cleanup-css.ts",
     "build": "npm-run-all build:css cleanup:css"
   },
