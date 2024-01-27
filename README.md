@@ -47,9 +47,11 @@ yarn build
 
 ```html
 
-<link rel="stylesheet" href="./css/kurage.css">
+<link rel="stylesheet" href="./css/your-style.css">
 
+<link rel="stylesheet" href="./css/kurage.css">
 <!-- Breakpoints are read in order of size -->
+<!-- ブレイクポイントは大きい順に読み込む -->
 <link rel="stylesheet" href="./css/kurage-tab-834.css">
 <link rel="stylesheet" href="./css/kurage-sp-576.css">
 
