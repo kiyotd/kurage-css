@@ -28,8 +28,11 @@ entries.forEach((file: Entry) => {
       // クラス名の生成
       const className = `${file.name}-${num.toString().replace('.', '-')}`;
 
-      // 値の生成
-      const value = `${num}rem`;
+      // 値の生成 0 なら rem はつけない
+      let value = "0";
+      if (num !== 0) {
+        value = `${num}rem`;
+      }
 
       // クラスの文字列の生成
       let classStr = "";
@@ -41,6 +44,17 @@ entries.forEach((file: Entry) => {
 
       // classStrArr に追加
       classStrArr.push(classStr);
+
+      // !important のクラスの文字列の生成
+      let classStrImportant = "";
+      classStrImportant += `.${className}\\! {` + '\n';
+      file.props.forEach((prop) => {
+        classStrImportant += `  @include ${prop}(${value} !important);` + '\n';
+      });
+      classStrImportant += '}' + '\n\n';
+
+      // classStrArr に追加
+      classStrArr.push(classStrImportant);
 
       // i の増加
       i += scope.step;
@@ -89,8 +103,11 @@ entries.forEach((file: Entry) => {
         // クラス名の生成
         const className = `${file.name}-${key}-${num.toString().replace('.', '-')}`;
 
-        // 値の生成
-        const value = `${num}rem`;
+        // 値の生成 0 なら rem はつけない
+        let value = "0";
+        if (num !== 0) {
+          value = `${num}rem`;
+        }
 
         // クラスの文字列の生成
         let classStr = "";
@@ -102,6 +119,17 @@ entries.forEach((file: Entry) => {
 
         // classStrArr に追加
         classStrArr.push(classStr);
+
+        // !important のクラスの文字列の生成
+        let classStrImportant = "";
+        classStrImportant += `.${className}\\! {`;
+        file.props.forEach((prop) => {
+          classStrImportant += `@include ${prop}(${value} !important);`;
+        });
+        classStrImportant += '}' + '\n';
+
+        // classStrArr に追加
+        classStrArr.push(classStrImportant);
 
         // i の増加
         i += scope.step;
