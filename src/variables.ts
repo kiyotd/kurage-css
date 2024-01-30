@@ -5,7 +5,7 @@ export const OutputScssBreakPointPath = "../scss/breakpoint";
 export const importRfsStr = '@import "../../node_modules/rfs/scss";\n\n';
 
 /**
- * rfsScopeは、rfsに関連するCSSクラスを生成するための範囲とステップを定義した配列です。
+ * rfsScopesは、rfsに関連するCSSクラスを生成するための範囲とステップを定義した配列です。
  */
 export const rfsScopes: Scope[] = [
   { startNum: 0.5, endNum: 4, step: 0.025 },
@@ -15,7 +15,7 @@ export const rfsScopes: Scope[] = [
 ];
 
 /**
- * commonScopeは、一般的なCSSクラス（rm*とrp*）を生成するための範囲とステップを定義した配列です。
+ * commonScopesは、一般的なCSSクラス（rm*とrp*）を生成するための範囲とステップを定義した配列です。
  */
 export const commonScopes: Scope[] = [
   { startNum: 0, endNum: 4, step: 0.125 },
