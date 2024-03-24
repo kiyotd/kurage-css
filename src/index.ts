@@ -1,16 +1,19 @@
-import fs from "fs";
-import path from "path";
-import { entries, importRfsStr, OutputScssBreakPointPath, OutputScssDefaultPath } from "./variables";
+import fs from "node:fs";
+import path from "node:path";
+
+import type { Entry, Scope } from "./types";
+
 import { breakpoints } from "./breakpoints";
 import { writeToFile } from "./functions";
-import { Entry, Scope } from "./types";
+import { OutputScssBreakPointPath, OutputScssDefaultPath, entries, importRfsStr } from "./variables";
 
 /**
  * デフォルトのSCSSを生成する
  */
 
 // 各エントリに対して処理を行う
-entries.forEach((file: Entry) => {
+
+entries.forEach((file: Entry, _index) => {
   // 出力パスの生成
   const output = path.resolve(__dirname, `${OutputScssDefaultPath}/_${file.name}.scss`);
   let classStrArr: string[] = [];
@@ -19,14 +22,14 @@ entries.forEach((file: Entry) => {
   const sortedScopes: Scope[] = file.scopes?.sort((a: Scope, b: Scope) => a.startNum - b.startNum) || [];
 
   // scopes の配列をループ
-  sortedScopes.forEach((scope: Scope) => {
+  sortedScopes.forEach((scope: Scope, _index) => {
     // 指定した範囲でループを回す
-    for (let i = scope.startNum; i <= scope.endNum;) {
+    for (let i = scope.startNum; i <= scope.endNum; ) {
       // 数値を四捨五入して小数点第三位までの文字列に変換
       const num = Math.round(i * 1000) / 1000;
 
       // クラス名の生成
-      const className = `${file.name}-${num.toString().replace('.', '-')}`;
+      const className = `${file.name}-${num.toString().replace(".", "-")}`;
 
       // 値の生成 0 なら rem はつけない
       let value = "0";
@@ -36,22 +39,22 @@ entries.forEach((file: Entry) => {
 
       // クラスの文字列の生成
       let classStr = "";
-      classStr += `.${className} {` + '\n';
-      file.props.forEach((prop) => {
-        classStr += `  @include ${prop}(${value});` + '\n';
+      classStr += `.${className} {\n`;
+      file.props.forEach((prop, _index) => {
+        classStr += `  @include ${prop}(${value});\n`;
       });
-      classStr += '}' + '\n\n';
+      classStr += "}" + "\n\n";
 
       // classStrArr に追加
       classStrArr.push(classStr);
 
       // !important のクラスの文字列の生成
       let classStrImportant = "";
-      classStrImportant += `.${className}\\! {` + '\n';
-      file.props.forEach((prop) => {
-        classStrImportant += `  @include ${prop}(${value} !important);` + '\n';
+      classStrImportant += `.${className}\\! {\n`;
+      file.props.forEach((prop, _index) => {
+        classStrImportant += `  @include ${prop}(${value} !important);\n`;
       });
-      classStrImportant += '}' + '\n\n';
+      classStrImportant += "}" + "\n\n";
 
       // classStrArr に追加
       classStrArr.push(classStrImportant);
@@ -68,13 +71,13 @@ entries.forEach((file: Entry) => {
   css += importRfsStr;
 
   // resultARr の配列を文字列として連結
-  css += classStrArr.join('');
+  css += classStrArr.join("");
 
   // ファイルの初期化
-  fs.writeFileSync(output, '');
+  fs.writeFileSync(output, "");
 
   // ファイルへの書き込み
-  writeToFile(output, css.trim() + '\n');
+  writeToFile(output, `${css.trim()}\n`);
 });
 
 /**
@@ -82,7 +85,7 @@ entries.forEach((file: Entry) => {
  */
 
 // 各エントリに対して処理を行う
-entries.forEach((file: Entry) => {
+entries.forEach((file: Entry, _index) => {
   // 出力パスの生成
   const output = path.resolve(__dirname, `${OutputScssBreakPointPath}/_${file.name}.scss`);
   let classStrArr: string[] = [];
@@ -91,17 +94,16 @@ entries.forEach((file: Entry) => {
   const sortedScopes: Scope[] = file.scopes?.sort((a: Scope, b: Scope) => a.startNum - b.startNum) || [];
 
   // .rfs-sp-d-1 のように、breakpoint ごとにクラスを生成する
-  Object.keys(breakpoints).forEach((key) => {
-
+  Object.keys(breakpoints).forEach((key, _index) => {
     // scopes の配列をループ
-    sortedScopes.forEach((scope: Scope) => {
+    sortedScopes.forEach((scope: Scope, _index) => {
       // 指定した範囲でループを回す
-      for (let i = scope.startNum; i <= scope.endNum;) {
+      for (let i = scope.startNum; i <= scope.endNum; ) {
         // 数値を四捨五入して小数点第三位までの文字列に変換
         const num = Math.round(i * 1000) / 1000;
 
         // クラス名の生成
-        const className = `${file.name}-${key}-${num.toString().replace('.', '-')}`;
+        const className = `${file.name}-${key}-${num.toString().replace(".", "-")}`;
 
         // 値の生成 0 なら rem はつけない
         let value = "0";
@@ -112,10 +114,10 @@ entries.forEach((file: Entry) => {
         // クラスの文字列の生成
         let classStr = "";
         classStr += `.${className} {`;
-        file.props.forEach((prop) => {
+        file.props.forEach((prop, _index) => {
           classStr += `@include ${prop}(${value});`;
         });
-        classStr += '}' + '\n';
+        classStr += "}" + "\n";
 
         // classStrArr に追加
         classStrArr.push(classStr);
@@ -123,10 +125,10 @@ entries.forEach((file: Entry) => {
         // !important のクラスの文字列の生成
         let classStrImportant = "";
         classStrImportant += `.${className}\\! {`;
-        file.props.forEach((prop) => {
+        file.props.forEach((prop, _index) => {
           classStrImportant += `@include ${prop}(${value} !important);`;
         });
-        classStrImportant += '}' + '\n';
+        classStrImportant += "}" + "\n";
 
         // classStrArr に追加
         classStrArr.push(classStrImportant);
@@ -135,7 +137,6 @@ entries.forEach((file: Entry) => {
         i += scope.step;
       }
     });
-
   });
 
   // resultArr重複を削除
@@ -145,11 +146,11 @@ entries.forEach((file: Entry) => {
   css += importRfsStr;
 
   // resultARr の配列を文字列として連結
-  css += classStrArr.join('');
+  css += classStrArr.join("");
 
   // ファイルの初期化
-  fs.writeFileSync(output, '');
+  fs.writeFileSync(output, "");
 
   // ファイルへの書き込み
-  writeToFile(output, css.trim() + '\n');
+  writeToFile(output, `${css.trim()}\n`);
 });

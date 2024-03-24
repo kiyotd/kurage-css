@@ -1,4 +1,4 @@
-import { Entry, Scope } from "./types";
+import type { Entry, Scope } from "./types";
 
 export const OutputScssDefaultPath = "../scss/default";
 export const OutputScssBreakPointPath = "../scss/breakpoint";
@@ -24,7 +24,7 @@ export const rfsScopes: Scope[] = [
   { startNum: 0.5, endNum: 4, step: 0.025 },
   { startNum: 4, endNum: 8, step: 0.1 },
   { startNum: 8, endNum: 12, step: 0.25 },
-  { startNum: 12, endNum: 16, step: 0.5 }
+  { startNum: 12, endNum: 16, step: 0.5 },
 ];
 
 /**
@@ -34,7 +34,7 @@ export const commonScopes: Scope[] = [
   { startNum: 0, endNum: 4, step: 0.125 },
   { startNum: 4, endNum: 8, step: 0.25 },
   { startNum: 8, endNum: 12, step: 0.5 },
-  { startNum: 12, endNum: 16, step: 1 }
+  { startNum: 12, endNum: 16, step: 1 },
 ];
 
 /**
@@ -44,7 +44,7 @@ export const yScopes: Scope[] = [
   { startNum: 0, endNum: 4, step: 0.125 },
   { startNum: 4, endNum: 8, step: 0.25 },
   { startNum: 8, endNum: 12, step: 0.5 },
-  { startNum: 12, endNum: 48, step: 1 }
+  { startNum: 12, endNum: 48, step: 1 },
 ];
 
 /**
