@@ -8,8 +8,8 @@ import type { Breakpoints } from "./types";
  */
 export const breakpoints: Breakpoints = {
   sp: [430, 576],
-  sm: [575, 576, 639, 640],
-  md: [767, 768],
+  sm: [575, 576, 639, 640, 767],
+  md: [767, 768, 991],
   tab: [768, 834],
   lg: [991, 992, 1023, 1024],
   xl: [1199, 1200, 1279, 1280],
