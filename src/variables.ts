@@ -4,17 +4,17 @@ export const OutputScssDefaultPath = "../scss/default";
 export const OutputScssBreakPointPath = "../scss/breakpoint";
 export const importRfsStr = '@import "../../node_modules/rfs/scss";\n\n';
 
-// 10px = rfs-0-625
-// 12px = rfs-0-75
-// 14px = rfs-0-875
+// 10px = rfs-0.625
+// 12px = rfs-0.75
+// 14px = rfs-0.875
 // 16px = rfs-1
-// 18px = rfs-1-125
-// 20px = rfs-1-25
-// 24px = rfs-1-5
-// 28px = rfs-1-75
+// 18px = rfs-1.125
+// 20px = rfs-1.25
+// 24px = rfs-1.5
+// 28px = rfs-1.75
 // 32px = rfs-2
-// 36px = rfs-2-25
-// 40px = rfs-2-5
+// 36px = rfs-2.25
+// 40px = rfs-2.5
 // 48px = rfs-3
 
 /**

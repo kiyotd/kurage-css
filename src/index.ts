@@ -5,7 +5,7 @@ import type { Entry, Scope } from "./types";
 
 import { breakpoints } from "./breakpoints";
 import { writeToFile } from "./functions";
-import { OutputScssBreakPointPath, OutputScssDefaultPath, entries, importRfsStr } from "./variables";
+import { entries, importRfsStr, OutputScssBreakPointPath, OutputScssDefaultPath } from "./variables";
 
 /**
  * デフォルトのSCSSを生成する
@@ -29,7 +29,7 @@ entries.forEach((file: Entry, _index) => {
       const num = Math.round(i * 1000) / 1000;
 
       // クラス名の生成
-      const className = `${file.name}-${num.toString().replace(".", "-")}`;
+      const className = `${file.name}-${num.toString().replace(".", "\.")}`;
 
       // 値の生成 0 なら rem はつけない
       let value = "0";
