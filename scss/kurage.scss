@@ -1,10 +1,10 @@
-/*! @kiyotd/kurage-css@1.4.0 */
+/*! @kiyotd/kurage-css@2.0.0 */
 
 // rfs
 @import "../node_modules/rfs/scss";
 
 // Responsive Font Size
-@import "default/rfs";
+//@import "scss/rfs/rfs";
 
 // Responsive Margin
 @import "default/rmt";

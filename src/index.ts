@@ -29,7 +29,7 @@ entries.forEach((file: Entry, _index) => {
       const num = Math.round(i * 1000) / 1000;
 
       // クラス名の生成
-      const className = `${file.name}-${num.toString().replace(".", "\.")}`;
+      const className = `${file.name}-${num.toString().replace(".", "\\.")}`;
 
       // 値の生成 0 なら rem はつけない
       let value = "0";
@@ -103,7 +103,7 @@ entries.forEach((file: Entry, _index) => {
         const num = Math.round(i * 1000) / 1000;
 
         // クラス名の生成
-        const className = `${file.name}-${key}-${num.toString().replace(".", "-")}`;
+        const className = `${file.name}-${key}-${num.toString().replace(".", "\\.")}`;
 
         // 値の生成 0 なら rem はつけない
         let value = "0";

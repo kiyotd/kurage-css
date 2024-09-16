@@ -1,0 +1,969 @@
+@import "../../node_modules/rfs/scss";
+
+.rfs-8px {
+  @include font-size(0.5rem);
+}
+
+.rfs-9px {
+  @include font-size(0.5625rem);
+}
+
+.rfs-10px {
+  @include font-size(0.625rem);
+}
+
+.rfs-11px {
+  @include font-size(0.6875rem);
+}
+
+.rfs-12px {
+  @include font-size(0.75rem);
+}
+
+.rfs-13px {
+  @include font-size(0.8125rem);
+}
+
+.rfs-14px {
+  @include font-size(0.875rem);
+}
+
+.rfs-15px {
+  @include font-size(0.9375rem);
+}
+
+.rfs-16px {
+  @include font-size(1rem);
+}
+
+.rfs-17px {
+  @include font-size(1.0625rem);
+}
+
+.rfs-18px {
+  @include font-size(1.125rem);
+}
+
+.rfs-19px {
+  @include font-size(1.1875rem);
+}
+
+.rfs-20px {
+  @include font-size(1.25rem);
+}
+
+.rfs-21px {
+  @include font-size(1.3125rem);
+}
+
+.rfs-22px {
+  @include font-size(1.375rem);
+}
+
+.rfs-23px {
+  @include font-size(1.4375rem);
+}
+
+.rfs-24px {
+  @include font-size(1.5rem);
+}
+
+.rfs-25px {
+  @include font-size(1.5625rem);
+}
+
+.rfs-26px {
+  @include font-size(1.625rem);
+}
+
+.rfs-27px {
+  @include font-size(1.6875rem);
+}
+
+.rfs-28px {
+  @include font-size(1.75rem);
+}
+
+.rfs-29px {
+  @include font-size(1.8125rem);
+}
+
+.rfs-30px {
+  @include font-size(1.875rem);
+}
+
+.rfs-31px {
+  @include font-size(1.9375rem);
+}
+
+.rfs-32px {
+  @include font-size(2rem);
+}
+
+.rfs-33px {
+  @include font-size(2.0625rem);
+}
+
+.rfs-34px {
+  @include font-size(2.125rem);
+}
+
+.rfs-35px {
+  @include font-size(2.1875rem);
+}
+
+.rfs-36px {
+  @include font-size(2.25rem);
+}
+
+.rfs-37px {
+  @include font-size(2.3125rem);
+}
+
+.rfs-38px {
+  @include font-size(2.375rem);
+}
+
+.rfs-39px {
+  @include font-size(2.4375rem);
+}
+
+.rfs-40px {
+  @include font-size(2.5rem);
+}
+
+.rfs-41px {
+  @include font-size(2.5625rem);
+}
+
+.rfs-42px {
+  @include font-size(2.625rem);
+}
+
+.rfs-43px {
+  @include font-size(2.6875rem);
+}
+
+.rfs-44px {
+  @include font-size(2.75rem);
+}
+
+.rfs-45px {
+  @include font-size(2.8125rem);
+}
+
+.rfs-46px {
+  @include font-size(2.875rem);
+}
+
+.rfs-47px {
+  @include font-size(2.9375rem);
+}
+
+.rfs-48px {
+  @include font-size(3rem);
+}
+
+.rfs-49px {
+  @include font-size(3.0625rem);
+}
+
+.rfs-50px {
+  @include font-size(3.125rem);
+}
+
+.rfs-51px {
+  @include font-size(3.1875rem);
+}
+
+.rfs-52px {
+  @include font-size(3.25rem);
+}
+
+.rfs-53px {
+  @include font-size(3.3125rem);
+}
+
+.rfs-54px {
+  @include font-size(3.375rem);
+}
+
+.rfs-55px {
+  @include font-size(3.4375rem);
+}
+
+.rfs-56px {
+  @include font-size(3.5rem);
+}
+
+.rfs-57px {
+  @include font-size(3.5625rem);
+}
+
+.rfs-58px {
+  @include font-size(3.625rem);
+}
+
+.rfs-59px {
+  @include font-size(3.6875rem);
+}
+
+.rfs-60px {
+  @include font-size(3.75rem);
+}
+
+.rfs-61px {
+  @include font-size(3.8125rem);
+}
+
+.rfs-62px {
+  @include font-size(3.875rem);
+}
+
+.rfs-63px {
+  @include font-size(3.9375rem);
+}
+
+.rfs-64px {
+  @include font-size(4rem);
+}
+
+.rfs-65px {
+  @include font-size(4.0625rem);
+}
+
+.rfs-66px {
+  @include font-size(4.125rem);
+}
+
+.rfs-67px {
+  @include font-size(4.1875rem);
+}
+
+.rfs-68px {
+  @include font-size(4.25rem);
+}
+
+.rfs-69px {
+  @include font-size(4.3125rem);
+}
+
+.rfs-70px {
+  @include font-size(4.375rem);
+}
+
+.rfs-71px {
+  @include font-size(4.4375rem);
+}
+
+.rfs-72px {
+  @include font-size(4.5rem);
+}
+
+.rfs-73px {
+  @include font-size(4.5625rem);
+}
+
+.rfs-74px {
+  @include font-size(4.625rem);
+}
+
+.rfs-75px {
+  @include font-size(4.6875rem);
+}
+
+.rfs-76px {
+  @include font-size(4.75rem);
+}
+
+.rfs-77px {
+  @include font-size(4.8125rem);
+}
+
+.rfs-78px {
+  @include font-size(4.875rem);
+}
+
+.rfs-79px {
+  @include font-size(4.9375rem);
+}
+
+.rfs-80px {
+  @include font-size(5rem);
+}
+
+.rfs-81px {
+  @include font-size(5.0625rem);
+}
+
+.rfs-82px {
+  @include font-size(5.125rem);
+}
+
+.rfs-83px {
+  @include font-size(5.1875rem);
+}
+
+.rfs-84px {
+  @include font-size(5.25rem);
+}
+
+.rfs-85px {
+  @include font-size(5.3125rem);
+}
+
+.rfs-86px {
+  @include font-size(5.375rem);
+}
+
+.rfs-87px {
+  @include font-size(5.4375rem);
+}
+
+.rfs-88px {
+  @include font-size(5.5rem);
+}
+
+.rfs-89px {
+  @include font-size(5.5625rem);
+}
+
+.rfs-90px {
+  @include font-size(5.625rem);
+}
+
+.rfs-91px {
+  @include font-size(5.6875rem);
+}
+
+.rfs-92px {
+  @include font-size(5.75rem);
+}
+
+.rfs-93px {
+  @include font-size(5.8125rem);
+}
+
+.rfs-94px {
+  @include font-size(5.875rem);
+}
+
+.rfs-95px {
+  @include font-size(5.9375rem);
+}
+
+.rfs-96px {
+  @include font-size(6rem);
+}
+
+.rfs-97px {
+  @include font-size(6.0625rem);
+}
+
+.rfs-98px {
+  @include font-size(6.125rem);
+}
+
+.rfs-99px {
+  @include font-size(6.1875rem);
+}
+
+.rfs-100px {
+  @include font-size(6.25rem);
+}
+
+.rfs-101px {
+  @include font-size(6.3125rem);
+}
+
+.rfs-102px {
+  @include font-size(6.375rem);
+}
+
+.rfs-103px {
+  @include font-size(6.4375rem);
+}
+
+.rfs-104px {
+  @include font-size(6.5rem);
+}
+
+.rfs-105px {
+  @include font-size(6.5625rem);
+}
+
+.rfs-106px {
+  @include font-size(6.625rem);
+}
+
+.rfs-107px {
+  @include font-size(6.6875rem);
+}
+
+.rfs-108px {
+  @include font-size(6.75rem);
+}
+
+.rfs-109px {
+  @include font-size(6.8125rem);
+}
+
+.rfs-110px {
+  @include font-size(6.875rem);
+}
+
+.rfs-111px {
+  @include font-size(6.9375rem);
+}
+
+.rfs-112px {
+  @include font-size(7rem);
+}
+
+.rfs-113px {
+  @include font-size(7.0625rem);
+}
+
+.rfs-114px {
+  @include font-size(7.125rem);
+}
+
+.rfs-115px {
+  @include font-size(7.1875rem);
+}
+
+.rfs-116px {
+  @include font-size(7.25rem);
+}
+
+.rfs-117px {
+  @include font-size(7.3125rem);
+}
+
+.rfs-118px {
+  @include font-size(7.375rem);
+}
+
+.rfs-119px {
+  @include font-size(7.4375rem);
+}
+
+.rfs-120px {
+  @include font-size(7.5rem);
+}
+
+.rfs-121px {
+  @include font-size(7.5625rem);
+}
+
+.rfs-122px {
+  @include font-size(7.625rem);
+}
+
+.rfs-123px {
+  @include font-size(7.6875rem);
+}
+
+.rfs-124px {
+  @include font-size(7.75rem);
+}
+
+.rfs-125px {
+  @include font-size(7.8125rem);
+}
+
+.rfs-126px {
+  @include font-size(7.875rem);
+}
+
+.rfs-127px {
+  @include font-size(7.9375rem);
+}
+
+.rfs-128px {
+  @include font-size(8rem);
+}
+
+.rfs-8px\! {
+  @include font-size(0.5rem !important);
+}
+
+.rfs-9px\! {
+  @include font-size(0.5625rem !important);
+}
+
+.rfs-10px\! {
+  @include font-size(0.625rem !important);
+}
+
+.rfs-11px\! {
+  @include font-size(0.6875rem !important);
+}
+
+.rfs-12px\! {
+  @include font-size(0.75rem !important);
+}
+
+.rfs-13px\! {
+  @include font-size(0.8125rem !important);
+}
+
+.rfs-14px\! {
+  @include font-size(0.875rem !important);
+}
+
+.rfs-15px\! {
+  @include font-size(0.9375rem !important);
+}
+
+.rfs-16px\! {
+  @include font-size(1rem !important);
+}
+
+.rfs-17px\! {
+  @include font-size(1.0625rem !important);
+}
+
+.rfs-18px\! {
+  @include font-size(1.125rem !important);
+}
+
+.rfs-19px\! {
+  @include font-size(1.1875rem !important);
+}
+
+.rfs-20px\! {
+  @include font-size(1.25rem !important);
+}
+
+.rfs-21px\! {
+  @include font-size(1.3125rem !important);
+}
+
+.rfs-22px\! {
+  @include font-size(1.375rem !important);
+}
+
+.rfs-23px\! {
+  @include font-size(1.4375rem !important);
+}
+
+.rfs-24px\! {
+  @include font-size(1.5rem !important);
+}
+
+.rfs-25px\! {
+  @include font-size(1.5625rem !important);
+}
+
+.rfs-26px\! {
+  @include font-size(1.625rem !important);
+}
+
+.rfs-27px\! {
+  @include font-size(1.6875rem !important);
+}
+
+.rfs-28px\! {
+  @include font-size(1.75rem !important);
+}
+
+.rfs-29px\! {
+  @include font-size(1.8125rem !important);
+}
+
+.rfs-30px\! {
+  @include font-size(1.875rem !important);
+}
+
+.rfs-31px\! {
+  @include font-size(1.9375rem !important);
+}
+
+.rfs-32px\! {
+  @include font-size(2rem !important);
+}
+
+.rfs-33px\! {
+  @include font-size(2.0625rem !important);
+}
+
+.rfs-34px\! {
+  @include font-size(2.125rem !important);
+}
+
+.rfs-35px\! {
+  @include font-size(2.1875rem !important);
+}
+
+.rfs-36px\! {
+  @include font-size(2.25rem !important);
+}
+
+.rfs-37px\! {
+  @include font-size(2.3125rem !important);
+}
+
+.rfs-38px\! {
+  @include font-size(2.375rem !important);
+}
+
+.rfs-39px\! {
+  @include font-size(2.4375rem !important);
+}
+
+.rfs-40px\! {
+  @include font-size(2.5rem !important);
+}
+
+.rfs-41px\! {
+  @include font-size(2.5625rem !important);
+}
+
+.rfs-42px\! {
+  @include font-size(2.625rem !important);
+}
+
+.rfs-43px\! {
+  @include font-size(2.6875rem !important);
+}
+
+.rfs-44px\! {
+  @include font-size(2.75rem !important);
+}
+
+.rfs-45px\! {
+  @include font-size(2.8125rem !important);
+}
+
+.rfs-46px\! {
+  @include font-size(2.875rem !important);
+}
+
+.rfs-47px\! {
+  @include font-size(2.9375rem !important);
+}
+
+.rfs-48px\! {
+  @include font-size(3rem !important);
+}
+
+.rfs-49px\! {
+  @include font-size(3.0625rem !important);
+}
+
+.rfs-50px\! {
+  @include font-size(3.125rem !important);
+}
+
+.rfs-51px\! {
+  @include font-size(3.1875rem !important);
+}
+
+.rfs-52px\! {
+  @include font-size(3.25rem !important);
+}
+
+.rfs-53px\! {
+  @include font-size(3.3125rem !important);
+}
+
+.rfs-54px\! {
+  @include font-size(3.375rem !important);
+}
+
+.rfs-55px\! {
+  @include font-size(3.4375rem !important);
+}
+
+.rfs-56px\! {
+  @include font-size(3.5rem !important);
+}
+
+.rfs-57px\! {
+  @include font-size(3.5625rem !important);
+}
+
+.rfs-58px\! {
+  @include font-size(3.625rem !important);
+}
+
+.rfs-59px\! {
+  @include font-size(3.6875rem !important);
+}
+
+.rfs-60px\! {
+  @include font-size(3.75rem !important);
+}
+
+.rfs-61px\! {
+  @include font-size(3.8125rem !important);
+}
+
+.rfs-62px\! {
+  @include font-size(3.875rem !important);
+}
+
+.rfs-63px\! {
+  @include font-size(3.9375rem !important);
+}
+
+.rfs-64px\! {
+  @include font-size(4rem !important);
+}
+
+.rfs-65px\! {
+  @include font-size(4.0625rem !important);
+}
+
+.rfs-66px\! {
+  @include font-size(4.125rem !important);
+}
+
+.rfs-67px\! {
+  @include font-size(4.1875rem !important);
+}
+
+.rfs-68px\! {
+  @include font-size(4.25rem !important);
+}
+
+.rfs-69px\! {
+  @include font-size(4.3125rem !important);
+}
+
+.rfs-70px\! {
+  @include font-size(4.375rem !important);
+}
+
+.rfs-71px\! {
+  @include font-size(4.4375rem !important);
+}
+
+.rfs-72px\! {
+  @include font-size(4.5rem !important);
+}
+
+.rfs-73px\! {
+  @include font-size(4.5625rem !important);
+}
+
+.rfs-74px\! {
+  @include font-size(4.625rem !important);
+}
+
+.rfs-75px\! {
+  @include font-size(4.6875rem !important);
+}
+
+.rfs-76px\! {
+  @include font-size(4.75rem !important);
+}
+
+.rfs-77px\! {
+  @include font-size(4.8125rem !important);
+}
+
+.rfs-78px\! {
+  @include font-size(4.875rem !important);
+}
+
+.rfs-79px\! {
+  @include font-size(4.9375rem !important);
+}
+
+.rfs-80px\! {
+  @include font-size(5rem !important);
+}
+
+.rfs-81px\! {
+  @include font-size(5.0625rem !important);
+}
+
+.rfs-82px\! {
+  @include font-size(5.125rem !important);
+}
+
+.rfs-83px\! {
+  @include font-size(5.1875rem !important);
+}
+
+.rfs-84px\! {
+  @include font-size(5.25rem !important);
+}
+
+.rfs-85px\! {
+  @include font-size(5.3125rem !important);
+}
+
+.rfs-86px\! {
+  @include font-size(5.375rem !important);
+}
+
+.rfs-87px\! {
+  @include font-size(5.4375rem !important);
+}
+
+.rfs-88px\! {
+  @include font-size(5.5rem !important);
+}
+
+.rfs-89px\! {
+  @include font-size(5.5625rem !important);
+}
+
+.rfs-90px\! {
+  @include font-size(5.625rem !important);
+}
+
+.rfs-91px\! {
+  @include font-size(5.6875rem !important);
+}
+
+.rfs-92px\! {
+  @include font-size(5.75rem !important);
+}
+
+.rfs-93px\! {
+  @include font-size(5.8125rem !important);
+}
+
+.rfs-94px\! {
+  @include font-size(5.875rem !important);
+}
+
+.rfs-95px\! {
+  @include font-size(5.9375rem !important);
+}
+
+.rfs-96px\! {
+  @include font-size(6rem !important);
+}
+
+.rfs-97px\! {
+  @include font-size(6.0625rem !important);
+}
+
+.rfs-98px\! {
+  @include font-size(6.125rem !important);
+}
+
+.rfs-99px\! {
+  @include font-size(6.1875rem !important);
+}
+
+.rfs-100px\! {
+  @include font-size(6.25rem !important);
+}
+
+.rfs-101px\! {
+  @include font-size(6.3125rem !important);
+}
+
+.rfs-102px\! {
+  @include font-size(6.375rem !important);
+}
+
+.rfs-103px\! {
+  @include font-size(6.4375rem !important);
+}
+
+.rfs-104px\! {
+  @include font-size(6.5rem !important);
+}
+
+.rfs-105px\! {
+  @include font-size(6.5625rem !important);
+}
+
+.rfs-106px\! {
+  @include font-size(6.625rem !important);
+}
+
+.rfs-107px\! {
+  @include font-size(6.6875rem !important);
+}
+
+.rfs-108px\! {
+  @include font-size(6.75rem !important);
+}
+
+.rfs-109px\! {
+  @include font-size(6.8125rem !important);
+}
+
+.rfs-110px\! {
+  @include font-size(6.875rem !important);
+}
+
+.rfs-111px\! {
+  @include font-size(6.9375rem !important);
+}
+
+.rfs-112px\! {
+  @include font-size(7rem !important);
+}
+
+.rfs-113px\! {
+  @include font-size(7.0625rem !important);
+}
+
+.rfs-114px\! {
+  @include font-size(7.125rem !important);
+}
+
+.rfs-115px\! {
+  @include font-size(7.1875rem !important);
+}
+
+.rfs-116px\! {
+  @include font-size(7.25rem !important);
+}
+
+.rfs-117px\! {
+  @include font-size(7.3125rem !important);
+}
+
+.rfs-118px\! {
+  @include font-size(7.375rem !important);
+}
+
+.rfs-119px\! {
+  @include font-size(7.4375rem !important);
+}
+
+.rfs-120px\! {
+  @include font-size(7.5rem !important);
+}
+
+.rfs-121px\! {
+  @include font-size(7.5625rem !important);
+}
+
+.rfs-122px\! {
+  @include font-size(7.625rem !important);
+}
+
+.rfs-123px\! {
+  @include font-size(7.6875rem !important);
+}
+
+.rfs-124px\! {
+  @include font-size(7.75rem !important);
+}
+
+.rfs-125px\! {
+  @include font-size(7.8125rem !important);
+}
+
+.rfs-126px\! {
+  @include font-size(7.875rem !important);
+}
+
+.rfs-127px\! {
+  @include font-size(7.9375rem !important);
+}
+
+.rfs-128px\! {
+  @include font-size(8rem !important);
+}
