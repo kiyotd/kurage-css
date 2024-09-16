@@ -20,12 +20,12 @@ export const importRfsStr = '@import "../../node_modules/rfs/scss";\n\n';
 /**
  * rfsScopesは、rfsに関連するCSSクラスを生成するための範囲とステップを定義した配列です。
  */
-export const rfsScopes: Scope[] = [
-  { startNum: 0.5, endNum: 4, step: 0.025 },
-  { startNum: 4, endNum: 8, step: 0.1 },
-  { startNum: 8, endNum: 12, step: 0.25 },
-  { startNum: 12, endNum: 16, step: 0.5 },
-];
+// export const rfsScopes: Scope[] = [
+//   { startNum: 0.5, endNum: 4, step: 0.025 },
+//   { startNum: 4, endNum: 8, step: 0.1 },
+//   { startNum: 8, endNum: 12, step: 0.25 },
+//   { startNum: 12, endNum: 16, step: 0.5 },
+// ];
 
 /**
  * commonScopesは、一般的なCSSクラス（rm*とrp*）を生成するための範囲とステップを定義した配列です。
@@ -33,8 +33,8 @@ export const rfsScopes: Scope[] = [
 export const commonScopes: Scope[] = [
   { startNum: 0, endNum: 4, step: 0.125 },
   { startNum: 4, endNum: 8, step: 0.25 },
-  { startNum: 8, endNum: 12, step: 0.5 },
-  { startNum: 12, endNum: 16, step: 1 },
+  { startNum: 8, endNum: 12, step: 0.25 },
+  { startNum: 12, endNum: 16, step: 0.5 },
 ];
 
 /**
@@ -43,15 +43,15 @@ export const commonScopes: Scope[] = [
 export const yScopes: Scope[] = [
   { startNum: 0, endNum: 4, step: 0.125 },
   { startNum: 4, endNum: 8, step: 0.25 },
-  { startNum: 8, endNum: 12, step: 0.5 },
-  { startNum: 12, endNum: 48, step: 1 },
+  { startNum: 8, endNum: 12, step: 0.25 },
+  { startNum: 12, endNum: 48, step: 0.5 },
 ];
 
 /**
  * entriesは、生成するCSSクラスの設定を定義したEntryオブジェクトの配列です。
  */
 export const entries: Entry[] = [
-  { name: "rfs", scopes: rfsScopes, props: ["font-size"] },
+  // { name: "rfs", scopes: rfsScopes, props: ["font-size"] },
   { name: "rmt", scopes: yScopes, props: ["margin-top"] },
   { name: "rmb", scopes: yScopes, props: ["margin-bottom"] },
   { name: "rml", scopes: commonScopes, props: ["margin-left"] },

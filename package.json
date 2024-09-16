@@ -1,6 +1,6 @@
 {
   "name": "kurage-css",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "main": "index.ts",
   "repository": "git@github.com:kiyotd/kurage-css.git",
   "author": "kiyotd <torigoedesign@gmail.com>",
@@ -11,12 +11,15 @@
     "generate:scss:hot": "bun --hot src/index.ts",
     "generate:scss:watch": "bun --watch src/index.ts",
     "build:scss": "bun src/index.ts",
-    "build:css": "npm-run-all generate:css:default:* generate:css:breakpoint:expanded",
+    "build:css": "npm-run-all generate:css:default:* generate:css:breakpoint:expanded generate:css:rfs",
     "generate:css:default:expanded": "sass scss/kurage.scss dist/kurage.css --no-source-map --style=expanded",
     "generate:css:breakpoint:expanded": "sass scss/kurage-breakpoint.scss dist/.temp.css --no-source-map --style=expanded",
-    "cleanup:css": "bun src/cleanup-css.ts",
+    "generate:css:rfs": "sass scss/rfs/_rfs.scss scss/rfs/rfs.css --no-source-map --style=expanded",
+    "cleanup:css:1": "bun src/cleanup-css.ts",
+    "cleanup:css:2": "bun scss/rfs/1_cleanup-css.ts",
+    "add:rfs": "bun scss/rfs/2_add_css.ts",
     "minify:css": "bun src/minify-css.ts",
-    "build": "npm-run-all build:css cleanup:css minify:css"
+    "build": "npm-run-all build:css cleanup:css:* add:rfs minify:css"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.2",
