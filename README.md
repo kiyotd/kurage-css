@@ -1,7 +1,5 @@
 # kurage-css
 
-https://github.com/kiyotd/kurage-css/assets/41136135/8bb05726-5747-4538-9abc-764ff57c4fc3
-
 Class utility to specify responsive font size, margins, and padding. It is generic and can be incorporated into a variety of projects.
 
 It can also be used with frameworks such as Tailwind CSS, Bootstrap, etc.
@@ -13,13 +11,13 @@ Breakpoints are also supported, allowing you to add your own breakpoints; based 
 <link rel="stylesheet" href="./your-style.css">
 <link rel="stylesheet" href="./kurage-css/dist/min/kurage.min.css">
 <!-- Breakpoints are read in order of size -->
-<link rel="stylesheet" href="./kurage-css/dist/min/kurage-tab-834.min.css">
-<link rel="stylesheet" href="./kurage-css/dist/min/kurage-sp-576.min.css">
+<link rel="stylesheet" href="./kurage-css/dist/min/kurage-md-767.min.css">
+<link rel="stylesheet" href="./kurage-css/dist/min/kurage-sm-575.min.css">
 
 <!-- Example of font size -->
-<p class="rfs-1-8 rfs-sp-1-6">
-  The font size is 1.8rem on a PC and 1.6rem on a smartphone.
-  Moreover, it is resized in responsive.
+<p class="rfs-32px rfs-sm-24px">
+  The font size is 32px on a PC and 24px on a smartphone.
+  it is resized in responsive.
 </p>
 ```
 
@@ -29,28 +27,32 @@ Breakpoints are also supported, allowing you to add your own breakpoints; based 
 
 Tailwind CSS, Bootstrap 等のフレームワークとも併用できます。
 
-ブレイクポイントにも対応しており、独自のブレイクポイントを追加可能です。PCファーストの設計思想に基づいており、max-width (〜以下) によるメディアクエリを使用しています。さまざまなデバイスサイズに適応したレスポンシブなデザインを実現可能です。
+ブレイクポイントに対応しており、独自のブレイクポイントも追加可能です。PCファーストの設計思想に基づいており、max-width によるメディアクエリを使用しています。さまざまなデバイスサイズに適応したレスポンシブなデザインを実現可能です。
 
 ```html
 
 <link rel="stylesheet" href="./your-style.css">
 <link rel="stylesheet" href="./kurage-css/dist/min/kurage.min.css">
 <!-- ブレイクポイントは大きい順に読み込む -->
-<link rel="stylesheet" href="./kurage-css/dist/min/kurage-tab-834.min.css">
-<link rel="stylesheet" href="./kurage-css/dist/min/kurage-sp-576.min.css">
+<link rel="stylesheet" href="./kurage-css/dist/min/kurage-md-767.min.css">
+<link rel="stylesheet" href="./kurage-css/dist/min/kurage-sm-575.min.css">
 
 <!-- フォントサイズの例 -->
-<p class="rfs-1-8 rfs-sp-1-6">
-  PCでは 1.8rem、スマートフォンでは 1.6remのフォントサイズ。
-  しかも、レスポンシプでサイズ変更されます。
+<p class="rfs-32px rfs-sm-24px">
+  PCでは 32px、スマートフォンでは 24pxのフォントサイズ。
+  レスポンシプでサイズ変更されます。
 </p>
 ```
 
+## Demo
+
+[responsive font size changes](https://prjtest.com/kiyotd/kurage-css/demo/)
+
 ## Font size
 
-| Class   | Description          |
-|---------|----------------------|
-| `rfs-*` | Responsive font size |
+| Class     | Description          |
+|-----------|----------------------|
+| `rfs-*px` | Responsive font size |
 
 ## Margin
 
@@ -89,14 +91,12 @@ See src/variables.ts for the generated ranges and number of steps.
  * @media (max-width: <値>px) のメディアクエリが定義されます。
  */
 export const breakpoints: Breakpoint = {
-  "sp": [430, 576],
-  "sm": [576],
-  "md": [768],
-  "tab": [768, 834],
-  "lg": [992],
-  "xl": [1200],
-  "xxl": [1400],
-};
+    "sm": [575, 576],
+    "md": [767, 768],
+    "lg": [991, 992],
+    "xl": [1200],
+    "xxl": [1400],
+  };
 ```
 
 ### src/variables.ts
@@ -107,24 +107,14 @@ Generation range and number of steps
 
 ```typescript
 /**
- * rfsScopesは、rfsに関連するCSSクラスを生成するための範囲とステップを定義した配列です。
- */
-export const rfsScopes: Scope[] = [
-  { startNum: 0.5, endNum: 4, step: 0.025 },
-  { startNum: 4, endNum: 8, step: 0.1 },
-  { startNum: 8, endNum: 12, step: 0.25 },
-  { startNum: 12, endNum: 16, step: 0.5 }
-];
-
-/**
  * commonScopesは、一般的なCSSクラス（rm*とrp*）を生成するための範囲とステップを定義した配列です。
  */
 export const commonScopes: Scope[] = [
-  { startNum: 0, endNum: 4, step: 0.125 },
-  { startNum: 4, endNum: 8, step: 0.25 },
-  { startNum: 8, endNum: 12, step: 0.5 },
-  { startNum: 12, endNum: 16, step: 1 }
-];
+    { startNum: 0, endNum: 4, step: 0.125 },
+    { startNum: 4, endNum: 8, step: 0.25 },
+    { startNum: 8, endNum: 12, step: 0.25 },
+    { startNum: 12, endNum: 16, step: 0.5 },
+  ];
 ```
 
 ## Important Class
@@ -135,9 +125,7 @@ If a class name ends with `! `, the class is given `!important`.
 
 ```html
 
-<p class="rmb-sp-0!">
-  このクラスはスマートフォンで margin-bottom: 0 !important; が付与されます。
-</p>
+<p class="rmb-sm-0!"></p>
 ```
 
 ## Build SCSS
